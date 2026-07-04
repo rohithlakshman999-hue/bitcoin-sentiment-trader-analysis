@@ -1,77 +1,88 @@
 # Bitcoin Market Sentiment vs Hyperliquid Trader Performance Analysis
 
 ## Project Overview
-This project analyzes the relationship between Bitcoin Fear & Greed market sentiment and Hyperliquid trader performance. The goal is to discover meaningful patterns, generate visualizations, perform statistical analysis, and provide actionable business insights that can improve trading strategies.
+
+This project analyzes the relationship between Bitcoin Fear & Greed market sentiment and Hyperliquid trader performance. Using historical trading data and daily market sentiment, it uncovers patterns in trader behavior, profitability, leverage usage, and risk-taking to generate actionable insights that can support smarter trading strategies.
 
 ## Objective
-To explore and quantify how varying states of market sentiment (Fear vs. Greed) impact trader profitability, leverage usage, and trade sizing on the Hyperliquid platform.
 
-## Folder Structure
-```
-Primetrade_Assignment/
-├── data/                       # Contains raw CSV datasets
+The objective is to explore how Bitcoin market sentiment influences trader performance by combining the Bitcoin Fear & Greed Index with Hyperliquid historical trading data. The project focuses on data preprocessing, exploratory data analysis (EDA), statistical analysis, and visualization to identify meaningful relationships between market sentiment and trading outcomes.
+
+## Project Structure
+
+```text
+bitcoin-sentiment-trader-analysis/
+│
+├── data/
 │   ├── fear_greed_index.csv
 │   └── historical_data.csv
-├── output/                     # Contains generated datasets and insights
-│   ├── charts/                 # Generated visualizations
+│
+├── output/
+│   ├── charts/
 │   ├── merged_dataset.csv
 │   ├── summary_statistics.csv
 │   └── insights.txt
-├── main.py                     # Main execution script
-├── requirements.txt            # Python dependencies
-├── README.md                   # Project documentation
-└── report_template.md          # Template for final report
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── report_template.md
 ```
 
 ## Technologies Used
-- **Python 3.12+**
-- **Pandas** (Data Manipulation)
-- **NumPy** (Numerical Computing)
-- **Matplotlib & Seaborn** (Data Visualization)
-- **SciPy** (Statistical Analysis)
+
+* Python 3.12+
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* SciPy
 
 ## Installation
 
-1. Clone or extract the project directory.
-2. Ensure you have Python 3.12+ installed.
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1. Clone the repository.
+2. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
 
 ## How to Run
 
-1. Place the datasets `fear_greed_index.csv` and `historical_data.csv` inside the `data/` folder.
-2. Run the main script from the root directory:
-   ```bash
-   python main.py
-   ```
+1. Place both datasets inside the `data/` folder.
+2. Execute the project:
 
-## Project Workflow
-1. **Data Loading**: Loads CSVs and handles parsing.
-2. **Data Cleaning**: Removes duplicates, handles NAs, standardizes columns, fixes datetime formats.
-3. **Feature Engineering**: Derives trade hour, weekday, absolute PnL, profit flags.
-4. **Data Merging**: Joins trading data with daily sentiment values.
-5. **EDA & Analysis**:
-   - Overall Statistics
-   - Sentiment Impact Analysis
-   - Trader & Symbol Performance
-   - Temporal (Time) Analysis
-   - Buy vs Sell Comparison
-   - Statistical testing (Correlation)
-6. **Visualizations**: Auto-generates distribution plots, heatmaps, and bar charts.
-7. **Business Insights**: Writes actionable insights to a text file.
+```bash
+python main.py
+```
+
+## Workflow
+
+* Load and validate both datasets.
+* Clean and preprocess the data.
+* Engineer useful analytical features.
+* Merge trading data with the Bitcoin Fear & Greed Index.
+* Perform exploratory data analysis.
+* Generate statistical summaries and visualizations.
+* Produce business insights and recommendations.
+* Export processed datasets and analysis results.
 
 ## Generated Outputs
-- **`summary_statistics.csv`**: Contains statistical descriptors for numeric columns.
-- **`merged_dataset.csv`**: Cleaned and combined dataset.
-- **`charts/`**: Directory containing all PNG visualizations.
-- **`insights.txt`**: Automated business observations and recommendations.
 
-## Key Findings
-*(Please run `python main.py` and read `output/insights.txt` for the detailed generated findings).*
+* Merged dataset
+* Summary statistics
+* Professional visualizations
+* Business insights report
+
+All generated files are stored inside the `output/` directory.
 
 ## Future Improvements
-- Incorporate Machine Learning for PnL prediction based on sentiment.
-- Add real-time API integrations for Live Order Book analysis.
-- Build an interactive dashboard (e.g., using Streamlit or Dash) for dynamic filtering.
+
+* Predictive modeling using machine learning.
+* Interactive dashboard using Streamlit or Dash.
+* Real-time market sentiment integration.
+* Automated trading performance monitoring.
+
+## Author
+
+Rohith Lakshman
